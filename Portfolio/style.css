@@ -1,0 +1,809 @@
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Prosto One', cursive;
+}
+
+:root {
+    --color-primary: #6c63ff;
+    --color-success: #00ecb1;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-danger-variant: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #000;
+    --color-highlight: #00ffff;
+    --color-bg: #1f2641;
+    --color-bg1: #2e3267;
+    --color-bg2: #424890;
+    --transition: all 400ms ease;
+}
+
+/* customizing scrollbar  */
+
+::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-light);
+}
+
+/* customizing scrollbar ends here */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ================================= common styles ===========================================  */
+.highlight {
+    color: var(--color-primary);
+}
+
+.title-highlight {
+    color: var(--color-warning);
+}
+
+.text-highlight {
+    color: var(--color-highlight);
+}
+
+.btn {
+    background-color: var(--color-danger);
+    color: #fff;
+    padding: 0.5rem 0.8rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid var(--color-danger-variant);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--color-danger-variant);
+    transform: scale(0.95);
+}
+
+/* ================================= common style ends here ===================================  */
+
+/* ================================= header section ===========================================  */
+#header {
+    background: var(--color-bg)
+}
+
+/* ----------------------------------- nevigation menu ---------------------------------------- */
+.navbar {
+    height: 5rem;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    background: var(--color-bg);
+}
+
+nav h2 a {
+    font-size: 1.5rem;
+    color: var(--color-white);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--color-white);
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--color-warning);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: var(--transition);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ----------------------------------- nevigation menu ends here ------------------------------ */
+
+/* --------------------------------------- home section ------------------------------------- */
+#home {
+    position: relative;
+    top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10rem;
+    background: var(--color-bg);
+    background: linear-gradient(var(--color-bg), rgba(255, 255, 255, 0)), url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#home img {
+    width: 300px;
+    border-radius: 50%;
+    border: 1px solid var(--color-bg);
+    box-shadow: 0px 0px 8px var(--color-highlight);
+    margin: 1rem 0;
+}
+
+.header-left p {
+    color: var(--color-light);
+    padding: 0.5rem 0;
+}
+
+.header-left h1 {
+    color: var(--color-white);
+}
+
+.cv-btn {
+    margin: 1rem 0;
+}
+
+.social-links {
+    position: relative;
+    margin-top: 10px;
+}
+
+.social-links::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: var(--color-white);
+    position: absolute;
+    left: 0;
+    top: -15px;
+}
+
+/* ------------------------------ home section ends here ------------------------------------- */
+/* ================================= header section ends here ===============================  */
+
+/* ================================= about section =========================================  */
+#about {
+    position: relative;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 5rem;
+    padding-top: 6rem;
+    background-color: var(--color-bg1);
+}
+
+.about h2 {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.about p {
+    color: var(--color-light);
+    font-size: 1rem;
+    padding-bottom: 1rem;
+}
+
+.about-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-details ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    color: var(--color-white);
+}
+
+.about-details ul li {
+    margin: 1rem 0;
+}
+
+.about-details .about-description {
+    color: var(--color-light);
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+
+.tab-links {
+    position: relative;
+    cursor: pointer;
+}
+
+.tab-links::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--color-warning);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: var(--transition);
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-contents ul li {
+    margin-bottom: 0.5rem;
+    background-color: var(--color-bg);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.tab-contents ul li .title {
+    color: var(--color-success);
+    font-size: 1rem;
+}
+
+.tab-contents ul li .description {
+    font-size: 1rem;
+    color: var(--color-light);
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+
+}
+
+.title i {
+    color: var(--color-highlight);
+}
+
+/* ================= about section ends here ===============================  */
+
+/* ================================= services section ========================================  */
+#services {
+    position: relative;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 5rem;
+    padding-top: 6rem;
+    background-color: var(--color-bg2);
+}
+
+.services-title {
+    color: var(--color-white);
+    font-size: 1.2rem;
+}
+
+.services-box-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.services-box {
+    background: linear-gradient(180deg, var(--color-bg), var(--color-bg2));
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 310px;
+    transition: var(--transition);
+}
+
+.services-box:hover {
+    transform: scale(1.05);
+}
+
+.services-box i {
+    color: var(--color-white);
+    font-size: 1.5rem;
+}
+
+.services-box h4 {
+    color: var(--color-white);
+    font-size: 1rem;
+}
+
+.services-box p {
+    color: var(--color-light);
+    font-size: 0.8rem;
+    margin: 1rem 0;
+}
+
+.services-btn {
+    font-size: 0.8rem;
+    background-color: var(--color-warning);
+    color: var(--color-bg);
+}
+
+.services-btn:hover {
+    background-color: var(--color-warning);
+    transform: scale(0.95);
+}
+
+/* ================================= services section ends here ===============================  */
+
+/* ================================= portfolio section =========================================  */
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 5rem;
+    padding: 3rem 5rem;
+    padding-top: 6rem;
+    background-color: var(--color-bg1);
+}
+
+.portfolio-title {
+    color: var(--color-white);
+    font-size: 1.2rem;
+}
+
+.work-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin: 1rem 0;
+}
+
+.work {
+    border-radius: 0.5rem;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 0.5rem;
+    display: block;
+    transition: transform 1s;
+}
+
+.work:hover img {
+    transform: scale(2);
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--color-danger));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    padding: 0 1rem;
+    text-align: center;
+    transition: height 400ms;
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.layer h3 {
+    font-size: 1.2rem;
+}
+
+.layer p {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+
+.layer-links {
+    display: flex;
+}
+
+.layer-links a {
+    margin: 0 0.5rem;
+}
+
+.layer i {
+    background: var(--color-white);
+    color: var(--color-danger);
+    border-radius: 50%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+
+/* ================================= portfolio section ends here ===============================  */
+
+/* ================================= contact section ========================================  */
+#contact {
+    position: relative;
+    top: 5rem;
+    display: flex;
+    padding: 3rem 5rem;
+    padding-top: 6rem;
+    background-color: var(--color-bg2);
+}
+
+.contact-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+
+.contact-right {
+    width: 50%;
+    padding-left: 1rem;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-left h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-left .contact-details {
+    font-size: 0.8rem;
+    color: var(--color-white);
+    margin: 0.3rem 0;
+}
+
+.contact-details {
+    display: flex;
+    align-items: center;
+}
+
+.contact-details a {
+    color: var(--color-white);
+}
+
+.contact-details i {
+    font-size: 1.2rem;
+    color: var(--color-danger);
+    margin-right: 0.5rem;
+}
+
+.contact-media ul {
+    display: flex;
+}
+
+.contact-media ul a {
+    color: var(--color-light);
+    margin-right: 1rem;
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.contact-media ul a:hover {
+    color: var(--color-white);
+    transform: scale(1.05);
+}
+
+.contact-cv-btn {
+    width: fit-content;
+}
+
+.contact-media {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.contact-media::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: var(--color-white);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin: 0.2rem 0;
+    background: var(--color-bg);
+    padding: 0.3rem;
+    color: var(--color-white);
+    border: 1px solid var(--color-bg2);
+    border-radius: 6px;
+    width: 100%;
+}
+
+.contact-form-btn {
+    width: fit-content;
+}
+
+.contact-right span {
+    display: none;
+    color: var(--color-success);
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+/* ================================= contact section ends here ===============================  */
+
+/* ================================= footer ==================================================  */
+footer {
+    position: relative;
+    top: 5rem;
+    background: var(--color-bg);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-light);
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+/* ================================= footer ends here =======================================  */
+
+
+
+/* --------------------social media button affects ----------------------------------- */
+.fa {
+    padding: 10px;
+    font-size: 40px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border: 1px solid var(--color-bg);
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px var(--color-highlight);
+}
+
+.fa:hover {
+    opacity: 0.8;
+}
+
+.fa-linkedin {
+    background: #0A66C2;
+    color: white;
+}
+
+.fa-facebook {
+    background: #3b5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #00acee;
+    color: white;
+}
+
+.fa-instagram {
+    background: #8a3ab9;
+    color: white;
+}
+
+.fa-github {
+    background: #3a3535;
+    color: white;
+}
+
+/* --------------------social media button affects ends here ----------------------------------- */
+
+.menu-btn {
+    display: none;
+}
+
+/* ======================================== media quaries =======================================  */
+@media only screen and (max-width: 1024px) {
+    .work-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .nav-list {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        background: var(--color-bg);
+    }
+
+    .nav-list li {
+        padding: 1rem 1rem;
+        border-top: 1px solid var(--color-primary);
+        text-align: center;
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 1.5rem;
+        color: var(--color-white);
+        cursor: pointer;
+    }
+
+    #menu-close-btn {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        padding: 0 3rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #home {
+        flex-direction: column;
+    }
+
+    .header-left {
+        margin-bottom: 2rem;
+    }
+
+    #about {
+        align-items: center;
+    }
+
+    .about p {
+        padding: 0 1rem;
+    }
+
+    .services-box-list {
+        flex-direction: column;
+    }
+
+    .work-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-left {
+        padding-right: 0;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    .contact-right {
+        padding-left: 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .navbar {
+        height: 3rem;
+    }
+
+    .navbar h2 a {
+        font-size: 1rem;
+    }
+
+    .nav-list {
+        top: 3rem;
+    }
+
+    #home {
+        padding: 0 0;
+    }
+
+    #home img {
+        width: 280px;
+    }
+
+    #about {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .about-details {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100vw;
+        padding: 0 1rem;
+    }
+
+    .tab-contents ul li .title {
+        font-size: 1rem;
+    }
+
+    .tab-contents ul li .description {
+        font-size: 1rem;
+    }
+
+    .about-details .about-description {
+        font-size: 0.9rem;
+    }
+
+    .services-box {
+        width: 400px;
+    }
+
+    #portfolio {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .layer h3 {
+        font-size: 1.2rem;
+    }
+
+    .layer p {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+
+    .layer a i {
+        font-size: 1.5rem;
+    }
+
+    .work-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #contact {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .fa {
+        width: 50px;
+    }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator | Calculate Me!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="heading">
+        <h1>My Calculator</h1>
+    </div>
+    <div class="container">
+        <section class="nevigation">
+            <div id="mySidenav" class="sidenav">
+                <p class="closebtn" onclick="closeNav()">&#9776;</p>
+                <li id="standard-mode">Standard</li>
+                <li id="scientific-mode">Scientific</li>
+            </div>
+            <p onclick="openNav()">&#9776;<span id="nav-title"> Standard</span></p>
+        </section>
+        <section class="display-section">
+            <div class="input">
+                <span id="info" onclick="infoMessage()">Deg</span>
+                <input type="text" value="" id="display" disabled>
+            </div>
+            <div class="answer">
+                <input type="text" value="Ans" id="answer" disabled>
+            </div>
+        </section>
+        <section class="buttons">
+
+            <!-- simple  -->
+
+            <div class="simple-buttons" id="simple-btn">
+                <span class="rows">
+                    <button>(</button>
+                    <button>)</button>
+                    <button id="bgcolor-red">C</button>
+                    <button id="bgcolor-red"><i class="material-icons" style="font-size:18px">backspace</i></button>
+                </span>
+                <span class="rows">
+                    <button>%</button>
+                    <button>x<sup>2</sup></button>
+                    <button>&#8730;x</button>
+                    <button>&divide;</button>
+                </span>
+                <span class="rows">
+                    <button id="bgcolor-white">7</button>
+                    <button id="bgcolor-white">8</button>
+                    <button id="bgcolor-white">9</button>
+                    <button>x</button>
+                </span>
+                <span class="rows">
+                    <button id="bgcolor-white">4</button>
+                    <button id="bgcolor-white">5</button>
+                    <button id="bgcolor-white">6</button>
+                    <button>-</button>
+                </span>
+                <span class="rows">
+                    <button id="bgcolor-white">1</button>
+                    <button id="bgcolor-white">2</button>
+                    <button id="bgcolor-white">3</button>
+                    <button>+</button>
+                </span>
+                <span class="rows">
+                    <button>+/-</button>
+                    <button id="bgcolor-white">0</button>
+                    <button>.</button>
+                    <button id="equal">=</button>
+                </span>
+            </div>
+
+            <!-- scientific -->
+
+            <div class="scientific-buttons" id="scienific-btn">
+                <span class="rows">
+                    <button>^</button>
+                    <button>(</button>
+                    <button>)</button>
+                    <button id="bgcolor-red">C</button>
+                    <button id="bgcolor-red"><i class="material-icons" style="font-size:18px">backspace</i></button>
+                </span>
+                <span class="rows">
+                    <button>10<sup>x</sup></button>
+                    <button>|x|</button>
+                    <button>sin</button>
+                    <button>cos</button>
+                    <button>tan</button>
+                </span>
+                <span class="rows">
+                    <button>&pi;</button>
+                    <button>%</button>
+                    <button>x<sup>2</sup></button>
+                    <button>&#8730;x</button>
+                    <button>&divide;</button>
+                </span>
+                <span class="rows">
+                    <button>e</button>
+                    <button id="bgcolor-white">7</button>
+                    <button id="bgcolor-white">8</button>
+                    <button id="bgcolor-white">9</button>
+                    <button>x</button>
+                </span>
+                <span class="rows">
+                    <button>x!</button>
+                    <button id="bgcolor-white">4</button>
+                    <button id="bgcolor-white">5</button>
+                    <button id="bgcolor-white">6</button>
+                    <button>-</button>
+                </span>
+                <span class="rows">
+                    <button>log</button>
+                    <button id="bgcolor-white">1</button>
+                    <button id="bgcolor-white">2</button>
+                    <button id="bgcolor-white">3</button>
+                    <button>+</button>
+                </span>
+                <span class="rows">
+                    <button>ln</button>
+                    <button>+/-</button>
+                    <button id="bgcolor-white">0</button>
+                    <button>.</button>
+                    <button id="equal">=</button>
+                </span>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

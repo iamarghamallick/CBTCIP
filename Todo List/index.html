@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Todo List | Save your ToDos</title>
+</head>
+
+<body>
+    <header>
+        <div class="heading">ToDo List (<span id="notes_count">0</span>)</div>
+    </header>
+    <div class="container">
+        <div class="display-notes">
+            <div class="saved-heading">All Tasks</div>
+            <div id="display-notes">
+                <!-- to be repeated  -->
+                <div class="show-items">
+                    <div class="actions">
+                        <h6>Saving Time</h6>
+                        <div class="action-btn">
+                            <i class="fa fa-trash" onclick="removeTodo(index)"></i>
+                            <input type="checkbox" name="done" id="done" onclick="updateTodo(index)">
+                        </div>
+                    </div>
+                    <p>Saved todo goes here...</p>
+                </div>
+            </div>
+        </div>
+        <div class="display-notes">
+            <div class="saved-heading">Completed Tasks</div>
+            <div id="completed-task">
+                <!-- to be repeated  -->
+                <div class="show-items">
+                    <div class="actions">
+                        <h6>Saving Time</h6>
+                        <div class="action-btn">
+                            <i class="fa fa-trash" onclick="removeTodo()"></i>
+                        </div>
+                    </div>
+                    <p>Saved todo goes here...</p>
+                </div>
+            </div>
+        </div>
+
+
+        <form id="input-content">
+            <input id="todo-input" type="text" placeholder="Type your ToDo" />
+            <button id="save-btn" disabled><i class="fa fa-angle-right"></i></button>
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/db5c83b01d.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

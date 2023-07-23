@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 0, 75, 0.377);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.heading {
+    text-align: center;
+    color: white;
+    padding: 1rem 0;
+}
+
+.nevigation {
+    background-color: rgb(56, 56, 253);
+    border-radius: 10px;
+}
+
+.sidenav {
+    height: 120px;
+    width: 0;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 1;
+    top: 80px;
+    background-color: blue;
+    overflow-x: hidden;
+    transition: 0.2s;
+}
+
+.sidenav li {
+    list-style: none;
+    background-color: rgb(223, 223, 248);
+    font-size: 14px;
+    margin: 5px 20px;
+    padding: 3px 5px;
+    cursor: pointer;
+    border: 1px solid blue;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.sidenav li:hover {
+    border: 1px solid white;
+    background-color: white;
+    opacity: 1;
+}
+
+.nevigation p {
+    color: white;
+    padding: 1px 2px;
+    margin: 0 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.container {
+    background-color: blue;
+    border: 2px solid rgb(0, 0, 54);
+    border-radius: 10px;
+    width: 310px;
+}
+
+.input {
+    display: flex;
+    background-color: rgb(22, 22, 95);
+}
+
+#info {
+    display: none;
+    margin: 8px 2px;
+    padding: 5px;
+    color: rgba(255, 255, 255, 0.692);
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.356);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+#info:hover {
+    background-color: rgba(68, 68, 116, 0.575);
+}
+
+.input input,
+.answer input {
+    background-color: rgb(22, 22, 95);
+    border: none;
+    padding: 3px;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    text-align: right;
+    color: white;
+}
+
+.answer input {
+    font-weight: bold;
+    background-color: rgb(17, 17, 73);
+    margin-bottom: 3px;
+}
+
+.simple-buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+}
+
+
+.buttons button:hover {
+    border: 1px solid white;
+    opacity: 1;
+}
+
+.rows button {
+    border: none;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    border-radius: 10px;
+    margin: 3px;
+    width: 65px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+#equal {
+    background-color: rgb(17, 17, 73);
+    opacity: 1;
+    color: white;
+    font-size: 24px;
+    border: 1px solid white;
+}
+
+#bgcolor-white {
+    background-color: white;
+    opacity: 0.9;
+}
+
+#bgcolor-white:hover {
+    opacity: 1;
+    border: 1px solid white;
+}
+
+#bgcolor-red {
+    background-color: red;
+    opacity: 1;
+    color: white;
+    border: 1px solid white;
+}
+
+
+.scientific-buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+    display: none;
+}
+
+.scientific-buttons button {
+    width: 50px;
+    height: 35px;
+}
